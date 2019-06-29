@@ -36,7 +36,7 @@ public class GhostscriptLibraryLoader {
 
 	}
 
-	return (GhostscriptLibrary) Native.loadLibrary(libName,
+	return (GhostscriptLibrary) Native.load(libName,
 		GhostscriptLibrary.class);
     }
 }

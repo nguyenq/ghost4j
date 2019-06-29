@@ -6,6 +6,7 @@
  */
 package org.ghost4j;
 
+import com.sun.jna.Native;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -532,7 +533,7 @@ public class Ghostscript {
 	switch (nativeDisplayCallback.version_major) {
 	case 1:
 	    nativeDisplayCallback.size = nativeDisplayCallback.size()
-		    - Pointer.SIZE;
+		    - Native.POINTER_SIZE;
 	    break;
 	default:
 	    nativeDisplayCallback.size = nativeDisplayCallback.size();
